@@ -1,0 +1,55 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: miao123
+    url: jdbc:mysql://localhost:3306/sell?serverTimezone=UTC&characterEncoding=utf8&useSSL=false
+
+
+  jpa:
+    hibernate:
+      #     更新或者创建数据表结构
+      ddl-auto: update
+    #     控制台显示SQL语句
+    show-sql: true
+
+#设置项目的路径
+
+# 配置全局的 json格式   为空的数据不返回
+  jackson:
+    default-property-inclusion: non_null
+  redis:
+    host: 192.168.217.128
+    port: 6379
+#server
+#  servlet:
+#    context-path:
+#
+#logging:
+#  pattern:
+##    console: "%d - %msg%n"
+##  path: c:/dxx/xxx/    默认日志文件：spring.log
+##  file: c:/xx/xx.log   指定生成配置文件的路径及文件名
+#  level:
+#    com.miao.sell.LoggerTest:  debug     # 指定某个类的日志级别
+
+wechat:
+  mpAppId: wx757a2cd92be8b069
+  mpAppSecret: 1cd13b136872fc101975fa0c2633d12f
+  #以上两个授权需要
+
+  #微信开放平台的 id和密钥
+  openAppId: wx6ad144e54af67d87
+  openAppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
+  mchId: 1483469312
+  mchKey: 06C56A89949D617xxxxxxxxxxx
+  keyPath: /var/weixin_cert/h5.p12                       # 设置证书的路径
+  notifyUrl: http://sell.natapp4.cc/sell/pay/notify
+  templateId:                                               # 模板Id
+    orderStatus: e-Cqq67QxD6YNI41iRiqawEYdFavW_7pc7LyEMb-yeQ
+
+#自定义的Url
+projecturl:
+  wechatMpAuthorize: http://sell.natapp4.cc
+  wechatOpenAuthorize: http://sell.natapp4.cc
+  sell: http://localhost:8080
