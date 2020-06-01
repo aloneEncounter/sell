@@ -19,6 +19,13 @@
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.clojure/java.data -->
+        <dependency>
+            <groupId>org.clojure</groupId>
+            <artifactId>java.data</artifactId>
+            <version>1.0.73</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
